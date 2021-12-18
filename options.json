@@ -1,0 +1,20 @@
+{
+    "consoleMode":"all",
+    "resetHour":3,
+    "his":[
+        "Bonjour",
+        "Salut",
+        "Bonne nuit",
+        "Ta gueule",
+        "Je t\u0027aime",
+        "Bonne ann�e",
+        "Joyeux No�l",
+        "Joyeux thanksgiving",
+        "Joyeuses p�ques"
+    ],
+    "commandsChannelId":"295996658016190466",
+    "orderChannelId":"294101357529399296",
+    "emote1":"archer",
+    "emote2":"grumpy",
+    "emote3":"doggo"
+}

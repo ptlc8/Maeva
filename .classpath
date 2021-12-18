@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Kevin/JAVA librairies/gson-2.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kevin/JAVA librairies/pircbot.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kevin/JAVA librairies/okhttp-3.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kevin/JAVA librairies/JDA-4.2.0_214-withDependencies-min.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

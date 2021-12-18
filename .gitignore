@@ -1,0 +1,7 @@
+.settings
+bin
+logs/*
+data.json
+save.yml
+*.zip
+src/fr/ptlc/maeva/Tokens.java

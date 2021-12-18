@@ -1,0 +1,23 @@
+{
+    "articles":[
+        {
+            "name":"banane",
+            "price":10,
+            "description":"",
+            "imageUrl":"",
+            "args":[
+                "poids"
+            ]
+        },
+        {
+            "name":"Poney",
+            "price":12,
+            "description":"Un super poney pour pouvoir faire des balades libres en pleine nature ^^",
+            "imageUrl":"",
+            "args":[
+                "couleur",
+                "sexe"
+            ]
+        }
+    ]
+}
