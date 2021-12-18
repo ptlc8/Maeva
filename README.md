@@ -10,3 +10,8 @@ Maëva propose principalement :
  - des speed datings
 
 Avant de compiler, n'oubliez pas de mettre un token dans [src/fr/ptlc/maeva/Tokens.java](src/fr/ptlc/maeva/Tokens.java)
+Et de lier les dépendances au projet :
+ - gson
+ - pircbot
+ - okhttp
+ - JDA (min 4.2.0)
