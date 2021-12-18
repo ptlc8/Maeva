@@ -28,7 +28,7 @@ public class Recipes {
 		Matcher m = p.matcher(responseText);
 		EmbedBuilder eb = new EmbedBuilder();
 		eb.setTitle("Quelques recettes !", "");
-		eb.setThumbnail("https://agnd.fr/maeva/maeva-toque.png");
+		eb.setThumbnail("https://ambi.dev/maeva/maeva-toque.png");
 		while (m.find())
 			eb.appendDescription("["+m.group(2)+"]("+m.group(1)+")\n");
 		//eb.appendDescription("");
