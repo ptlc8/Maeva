@@ -21,7 +21,7 @@ public class Main {
 			//jda = (new JDABuilder(AccountType.BOT)).setToken(Tokens.MAEVA).build();
 			System.out.println("B0t connecté !");
 			jda.addEventListener(new BotListener());
-			jda.getPresence().setPresence(OnlineStatus.ONLINE, Activity.of(ActivityType.WATCHING, "cy-hub.fr/maeva"));
+			jda.getPresence().setPresence(OnlineStatus.ONLINE, Activity.of(ActivityType.WATCHING, "ambi.dev/maeva"));
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
