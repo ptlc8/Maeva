@@ -17,9 +17,9 @@ public class Main {
 		System.out.println("->Maeva " + getVersion() + ", par PTLC_, le " + getDate() + ", pour ->Lykos_Archos, vive la PogonaArmy !");
 		jda = null;
 		try {
-			jda = JDABuilder.createDefault(Tokens.MAEVA).build();
-			//jda = (new JDABuilder(AccountType.BOT)).setToken(Tokens.MAEVA).build();
-			System.out.println("B0t connecté !");
+			jda = JDABuilder.createDefault(Tokens.DISCORD).build();
+			//jda = (new JDABuilder(AccountType.BOT)).setToken(Tokens.DISCORD).build();
+			System.out.println("B0t connectï¿½ !");
 			jda.addEventListener(new BotListener());
 			jda.getPresence().setPresence(OnlineStatus.ONLINE, Activity.of(ActivityType.WATCHING, "ambi.dev/maeva"));
 		} catch(Exception e) {

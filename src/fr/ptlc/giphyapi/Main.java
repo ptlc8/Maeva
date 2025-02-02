@@ -12,7 +12,7 @@ public class Main {
     private static OkHttpClient client = new OkHttpClient();
 
     public static void main(String[] args) {
-        System.out.println(Main.getRandomGifUrl("cat hunter", "CeYnxeJsQprThusdyN6nFh6LdxYkHyQz", 5));
+        //System.out.println(Main.getRandomGifUrl("cat hunter", "Giphy API token", 5));
     }
 
     public static String getJSON(String url) throws IOException {

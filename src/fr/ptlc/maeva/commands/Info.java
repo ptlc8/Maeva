@@ -32,22 +32,22 @@ public class Info {
                 //embedBuilder.addField("Ping (Rest)", jda.getRestPing() + "ms", true);
                 embedBuilder.addField("Ping (Gateway)", jda.getGatewayPing() + "ms", true);
                 embedBuilder.addField("Version de Java", System.getProperty("java.version"), true);
-                embedBuilder.addField("OS de l'hébergeur", System.getProperty("os.name"), true);
+                embedBuilder.addField("OS de l'hï¿½bergeur", System.getProperty("os.name"), true);
                 embedBuilder.addField("Version de l'OS", System.getProperty("os.version"), true);
                 embedBuilder.addField("Arch de l'OS", System.getProperty("os.arch"), true);
                 embedBuilder.addField("Processeurs disponibles", runtime.availableProcessors()+"", true);
-                embedBuilder.addField("Mémoire maximum", runtime.maxMemory()/convert + u, true);
-                embedBuilder.addField("Mémoire libre", runtime.freeMemory()/convert + u, true);
-                embedBuilder.addField("Mémoire utilisé", (runtime.totalMemory()-runtime.freeMemory())/convert + u, true);
-                embedBuilder.addField("Mémoire allouée", runtime.totalMemory()/convert + u, true);
-                embedBuilder.addField("Mémoire libre totale", (runtime.freeMemory()+(runtime.maxMemory()-runtime.totalMemory()))/convert + u, true);
+                embedBuilder.addField("Mï¿½moire maximum", runtime.maxMemory()/convert + u, true);
+                embedBuilder.addField("Mï¿½moire libre", runtime.freeMemory()/convert + u, true);
+                embedBuilder.addField("Mï¿½moire utilisï¿½", (runtime.totalMemory()-runtime.freeMemory())/convert + u, true);
+                embedBuilder.addField("Mï¿½moire allouï¿½e", runtime.totalMemory()/convert + u, true);
+                embedBuilder.addField("Mï¿½moire libre totale", (runtime.freeMemory()+(runtime.maxMemory()-runtime.totalMemory()))/convert + u, true);
                 embedBuilder.setFooter(Functions.getUser(jda, UserProfession.CREATOR).getAsTag(), Functions.getUser(jda, UserProfession.CREATOR).getAvatarUrl());
                 return embedBuilder.build();
             case 2:
                 embedBuilder.clearFields();
                 embedBuilder.setDescription("");
                 embedBuilder.setTitle("Cr\u00e9ateur");
-                embedBuilder.setAuthor(Functions.getUser(jda, UserProfession.CREATOR).getName(), "https://agnd.fr", Functions.getUser(jda, UserProfession.CREATOR).getAvatarUrl());
+                embedBuilder.setAuthor(Functions.getUser(jda, UserProfession.CREATOR).getName(), "https://ambi.dev", Functions.getUser(jda, UserProfession.CREATOR).getAvatarUrl());
                 embedBuilder.setColor(Color.CYAN);
                 return embedBuilder.build();
             case 3:

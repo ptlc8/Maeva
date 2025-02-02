@@ -1,6 +1,7 @@
 package fr.ptlc.maeva.commands;
 
 import fr.ptlc.giphyapi.Main;
+import fr.ptlc.maeva.Tokens;
 import net.dv8tion.jda.api.entities.ChannelType;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
@@ -14,6 +15,6 @@ public class Gif {
 			searchArgs = String.valueOf(searchArgs) + args[i] + " ";
 		if (!message.getChannelType().equals((Object)ChannelType.PRIVATE))
 			message.delete().queue();
-		return author.getAsMention() + ", r\u00e9sultat pour *" + searchArgs.trim() + "*\n" + Main.getRandomGifUrl(searchArgs, "CeYnxeJsQprThusdyN6nFh6LdxYkHyQz", 5);
+		return author.getAsMention() + ", r\u00e9sultat pour *" + searchArgs.trim() + "*\n" + Main.getRandomGifUrl(searchArgs, Tokens.GIPHY, 5);
 	}
 }

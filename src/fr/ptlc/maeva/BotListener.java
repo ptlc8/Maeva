@@ -3,9 +3,6 @@ package fr.ptlc.maeva;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import fr.ptlc.maeva.Functions;
-import fr.ptlc.maeva.OnMessage;
-import fr.ptlc.maeva.commands.Twitch;
 import fr.ptlc.maeva.data.Maeva;
 import fr.ptlc.maeva.data.Save;
 import fr.ptlc.maeva.data.Server;
@@ -26,7 +23,7 @@ import net.dv8tion.jda.api.hooks.EventListener;
 
 public class BotListener implements EventListener {
 	 OnMessage on = new OnMessage();
-	 public static OnTwitch onTwitch = new OnTwitch(Twitch.oauth);
+	 public static OnTwitch onTwitch = new OnTwitch(Tokens.TWITCH);
 
 	 @Override
 	 public void onEvent(GenericEvent event) {
@@ -54,7 +51,7 @@ public class BotListener implements EventListener {
 							Message maevaQuery	= Functions.getMessage(e.getChannel(), e.getMessageId(), 0);
 							Message userQuery = Functions.getMessage(e.getChannel(), e.getMessageId(), -1);
 							userQuery.addReaction(e.getJDA().getEmotesByName(save.getOptions().getEmote3Name(), false).get(0)).queue();
-							maevaQuery.editMessage(e.getUser().getAsMention() + ", une personne compétante vous répondra dès qu'elle le pourra, puis ajoutez l'emote " + Functions.getEmoteTag(e.getJDA(), save.getOptions().getEmote3Name()) + "lorsque vous serez satisfait").queue();
+							maevaQuery.editMessage(e.getUser().getAsMention() + ", une personne compï¿½tante vous rï¿½pondra dï¿½s qu'elle le pourra, puis ajoutez l'emote " + Functions.getEmoteTag(e.getJDA(), save.getOptions().getEmote3Name()) + "lorsque vous serez satisfait").queue();
 							maevaQuery.delete().queueAfter(5, TimeUnit.SECONDS);
 						} else if(emoteName.equals(save.getOptions().getEmote3Name())) {
 							System.out.println(Functions.getMessagesAfter(e.getChannel(), e.getMessageId()).size());
@@ -77,7 +74,7 @@ public class BotListener implements EventListener {
 								&& e.getMember().getRoles().contains(e.getGuild().getRoleById(server.getAntiSpamRoleId()))) {
 							e.getGuild().removeRoleFromMember(e.getMember(), e.getGuild().getRoleById(server.getAntiSpamRoleId())).complete();
 							message.delete().queue();
-							e.getChannel().sendMessage(e.getUser().getAsMention() + ", bienvenue à toi !").queue();
+							e.getChannel().sendMessage(e.getUser().getAsMention() + ", bienvenue ï¿½ toi !").queue();
 						}
 					}
 				}
@@ -86,7 +83,7 @@ public class BotListener implements EventListener {
 				Maeva maeva = Save.getMaeva();
 				maeva.getData().addServer(new Server(((GuildJoinEvent)event).getGuild().getId()));
 				Save.writeDown(maeva);
-				((GuildJoinEvent)event).getGuild().getDefaultChannel().sendMessage("Merci de m'avoir ajoutée sur votre serveur !\nN'hésitez pas à envoyer `" + Save.getMaeva().getData().getServerById(((GuildJoinEvent)event).getGuild().getId()).getPrefix() + "help` pour avoir de l'aide\nEt si vous rencontrez des problèmes contactez " + Functions.getUser(event.getJDA(), UserProfession.CREATOR).getAsMention()).queue();
+				((GuildJoinEvent)event).getGuild().getDefaultChannel().sendMessage("Merci de m'avoir ajoutï¿½e sur votre serveur !\nN'hï¿½sitez pas ï¿½ envoyer `" + Save.getMaeva().getData().getServerById(((GuildJoinEvent)event).getGuild().getId()).getPrefix() + "help` pour avoir de l'aide\nEt si vous rencontrez des problï¿½mes contactez " + Functions.getUser(event.getJDA(), UserProfession.CREATOR).getAsMention()).queue();
 			} else if (event instanceof GuildMemberJoinEvent) {
 				Maeva save = Save.getMaeva();
 				Server server = save.getData().getServerById(((GuildMemberJoinEvent)event).getGuild().getId());
